@@ -51,9 +51,8 @@ public class JuspayTreeOfSpace {
 	private class Tree {
 		private static void informDesc(Node node , int value) {
 			if(node == null) return;
-
 			node.ancLockedCount += value;	
-      for(var child : node.childs) informDesc(child , value);
+            for(var child : node.childs) informDesc(child , value);
 		}
 
 		// LOCKING METHOD
@@ -136,7 +135,7 @@ public class JuspayTreeOfSpace {
 		static boolean upgradeNode(Node node , int id) {
 			if(node.isLocked == true || node.decsLockedCount <= 0 || node.ancLockedCount > 0) return false; 
 			
-      var lockedChilds = new ArrayList<Node>();
+            var lockedChilds = new ArrayList<Node>();
 			var ok = getChilds(node , lockedChilds , id);
 			if(!ok) return false;
 
@@ -144,10 +143,7 @@ public class JuspayTreeOfSpace {
 			for(var child : lockedChilds) unlockNode(child , id);
 			lockNode(node , id);
 			return true;
-
 		}
-
-
 
 		// build the Kry Tree
 		static HashMap<String , Node> buildTree(String[] arr , int k) {
@@ -178,7 +174,6 @@ public class JuspayTreeOfSpace {
 	}
 
 	private static Scanner scn;
-
 	public static void main(String[] args) { 
 		System.out.println("Starting Code !!");
 		scn = new Scanner(System.in);
@@ -202,5 +197,5 @@ public class JuspayTreeOfSpace {
 			else if(option == 3) ans = Tree.upgradeNode(node , id);
 			System.out.println(ans);
 		}
-  }
+    }
 }
