@@ -1,6 +1,5 @@
 # TreeOfSpace
 
-# JuspayTreeOfSpace
 The code of round A of Hackathon of Juspay (without thread safe).
 
 You are given an N-ry tree with N nodes and each node having atmost k childs.
