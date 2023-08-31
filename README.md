@@ -44,3 +44,5 @@ CONTRAINTS :
     1 < Nodename < 20 (Length of the name of nodes) 
 
 Note : Since the contraints are high and can lead to cubic time complexity while answering the queries, so a logarithmic solution is expected. And also the tree is balanced.
+
+Refer https://github.com/BadalSoni03/JuspayTreeOfSpace-Part-B/tree/main for part B's correct solution. 
